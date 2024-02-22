@@ -1,0 +1,191 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/donner-login.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #e5e5e5; /* This will be visible if the image fails to load */
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* Black with 50% opacity */
+    z-index: -1; /* Ensure the overlay is behind the content */
+}
+
+.container-fluid {
+    justify-content: center;
+    height: 100vh; /* Covers the full viewport height */
+    width: 100%;
+}
+
+h1 {
+    font-size: 5rem !important;
+    padding-top: 1em;
+    padding-bottom: 0.2em;
+    font-weight: 700 !important;
+    color: white;
+}
+
+
+
+div img {
+    width: 9rem !important;
+} 
+
+.login-container {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);    
+    border: none !important;
+    border-radius: 10px !important;
+    background-color: transparent !important;
+    backdrop-filter: blur(3px) brightness(0.6) !important;
+    padding: 5em;
+    width: 600px;
+}
+
+.login-container p {
+    font-weight: 400;
+}
+
+.login-container img{
+    max-width: 20rem;
+    margin-bottom: -60px;
+}
+
+.form-control {
+    border: 1px solid #ccc !important; 
+    transition: border-color 0.7s ease-in-out, box-shadow 0.7s ease-in-out; 
+    background: transparent !important;
+    color: white !important;
+    width: 400px !important;
+    font-size: 2rem !important;
+}
+
+.form-group {
+    padding: 1em !important;
+}
+
+.form-group ::placeholder {
+    color: rgb(164, 164, 164) !important;
+    font-weight: 100 !important;
+}
+
+.form-control:focus {
+    border-color: #a17f7f  !important; /* Focus border color */
+    box-shadow: 0 0 0 0.2rem rgba(228, 202, 202, 0.35) !important; /* Optional focus box shadow */
+    outline: none  !important; /* Removing default outline */
+}
+
+.btn-submit {
+    font-size: 2rem;
+    font-weight: 500;
+    transition-duration: 0.3s;
+    width: 400px;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.btn-submit:hover, .btn-submit:focus {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+
+h2 {
+    padding: 20px !important;
+}
+
+/* Default styles for larger screens */
+.form-control, .btn-submit {
+    width: 400px; /* Default width */
+    font-size: 2rem; /* Default font size */
+}
+
+.alert-danger {
+    width: 400px !important;
+    margin-left: 1rem;
+}
+
+.login-container {
+    padding: 5em; /* Default padding */
+    width: 600px; /* Default width */
+}
+
+@media (max-width: 2000px) {
+    .form-control, .btn-submit {
+        font-size: 1.8rem !important;
+    }
+    .login-container {
+        padding: 4em !important;
+        width: 550px !important; 
+    }
+    .btn-submit {
+        font-size: 1.8rem !important;
+    }
+    img {
+        margin-bottom: 5px !important;
+    }
+}
+
+@media (max-width: 1550px) {
+    .form-control, .btn-submit {
+        font-size: 1.6rem !important; 
+        width: 360px !important; 
+    }
+    .alert-danger {
+        width: 360px !important;
+    }
+    .login-container {
+        padding: 3.5em !important;
+        width: 490px !important;
+    }
+    .btn-submit {
+        font-size: 1.6rem !important;
+    }
+    h1 {
+        font-size: 4rem !important;
+    }
+    img {
+        margin-bottom: 5px !important;
+    }
+}
+
+
+
+@media (max-width: 950px) {
+    .form-control, .btn-submit {
+        font-size: 1.4rem !important; 
+        width: 260px !important; 
+    }
+    .alert-danger {
+        width: 260px !important;
+    }
+    .login-container {
+        padding: 3em !important;
+        width: 400px !important;
+    }
+    .btn-submit {
+        font-size: 1.4rem !important
+    }
+    h1 {
+        font-size: 2.6rem !important;
+    }
+    img {
+        margin-bottom: 5px !important;
+    }
+}
+
+
